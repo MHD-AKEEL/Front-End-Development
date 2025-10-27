@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Effects</title>
+    <script src="../jQuery Syntax/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <button type="button" class="hidebtn">Hide</button>
+    <button type="button" class="showbtn">Show</button>
+    <button type="button" class="togglebtn">Toggle</button>
+
+    <hr>
+
+    <p class="pfast">This paragraph will show/hide with fast speed.</p>
+    <p class="pslow">This paragraph will show/hide with slow speed.</p>
+    <p class="pclass">This paragraph will show/hide with very 2000ms.</p>
+
+    <script>
+        $(document).ready(function () {
+            //Hide the visible paragraph
+            $(".hidebtn").click(function () {
+                $("p.pfast").hide("fast");
+                $("p.pslow").hide("slow");
+                $("p.pclass").hide("2000");
+            });
+
+            //show hidden paragraph
+            $(".showbtn").click(function () {
+                $("p.pfast").show("fast");
+                $("p.pslow").show("slow");
+                $("p.pclass").show(2000);
+            });
+
+            //Toggle between show and hide 
+            $(".togglebtn").click(function () {
+                $("p.pfast").toggle("fast");
+                $("p.pslow").toggle("slow");
+                $("p.pclass").toggle(2000);
+            });
+        });
+
+    </script>
+</body>
+
+</html>
